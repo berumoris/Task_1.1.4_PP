@@ -1,5 +1,7 @@
 package jm.task.core.jdbc.util;
 
+import org.hibernate.cfg.Configuration;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -25,24 +27,6 @@ public class Util {
         return connection;
     }
 
+    Configuration cfg = new Configuration();
 
-
-/*    public Connection getConnection() {
-
-        Connection connection = null;
-
-        try {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-    } catch (ClassNotFoundException e) {
-        e.printStackTrace();
-    }
-
-        try {
-        connection = DriverManager.getConnection(URL, USER, PASSWORD);
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return connection;
-    }*/
 }
