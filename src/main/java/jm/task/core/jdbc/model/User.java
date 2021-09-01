@@ -1,12 +1,21 @@
 package jm.task.core.jdbc.model;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
 
-@Table
+import javax.persistence.*;
+
+import static javax.persistence.GenerationType.SEQUENCE;
+
+
+@Entity
+@Table(name = "users")
 public class User {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy=SEQUENCE, generator="CUST_SEQ")
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    //@Column
     private Long id;
 
     @Column
